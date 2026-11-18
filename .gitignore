@@ -1,0 +1,9 @@
+# HUNTORA — nothing to build, so only editor / OS noise is ignored
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.vscode/
+.idea/
+*.swp
+*~

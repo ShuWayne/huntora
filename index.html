@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HUNTORA — Hunt Opportunities. Build Wealth.</title>
+<meta name="description" content="HUNTORA is a 2050-inspired opportunity-hunting command center: radar, client discovery, execution pipeline and revenue tracking — built on real researched opportunities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%2322d3ee' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%2322d3ee'/%3E%3Cline x1='16' y1='16' x2='26' y2='6' stroke='%238b5cf6' stroke-width='2'/%3E%3C/svg%3E">
+</head>
+<body>
+<div id="bg3d" aria-hidden="true"></div>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow" aria-hidden="true"></div>
+
+<div class="app">
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="logo">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="16" stroke="#22d3ee" stroke-width="1.6"/>
+        <circle cx="20" cy="20" r="9.5" stroke="#8b5cf6" stroke-width="1.2" opacity="0.7"/>
+        <circle cx="20" cy="20" r="3.2" fill="#22d3ee"/>
+        <line x1="20" y1="20" x2="32" y2="8" stroke="#22d3ee" stroke-width="1.6"/>
+        <circle cx="32" cy="8" r="2.2" fill="#8b5cf6"/>
+      </svg>
+      <div>
+        <div class="logo-name">HUNT<span>ORA</span></div>
+        <div class="logo-tag">HUNT OPPORTUNITIES. BUILD WEALTH.</div>
+      </div>
+    </div>
+
+    <nav class="nav" id="mainNav">
+      <div class="nav-label">Command</div>
+      <button class="nav-item active" data-view="command"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Command Deck</button>
+      <button class="nav-item" data-view="radar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/><line x1="12" y1="12" x2="19" y2="5"/></svg>Opportunity Radar <span class="count" id="navRadarCount">16</span></button>
+      <button class="nav-item" data-view="hunter"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a7 7 0 0 1 7 7c0 2.4-1.2 4.2-2.6 5.6-.9.9-1.4 2-1.4 3.4H9c0-1.4-.5-2.5-1.4-3.4C6.2 13.2 5 11.4 5 9a7 7 0 0 1 7-7z"/><line x1="9" y1="21" x2="15" y2="21"/></svg>AI Business Hunter</button>
+      <div class="nav-label">Pipeline</div>
+      <button class="nav-item" data-view="clients"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.2 3.4-5 6.5-5s5.7 1.8 6.5 5"/><circle cx="17" cy="9" r="2.6"/><path d="M15.5 14.6c2.9.3 5.2 1.9 6 5.4"/></svg>Client Discovery <span class="count" id="navClientCount">22</span></button>
+      <button class="nav-item" data-view="map"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9S14.5 18.4 12 21c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3z"/></svg>Global Map</button>
+      <button class="nav-item" data-view="execution"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h10M4 18h7"/><circle cx="19" cy="16" r="3"/></svg>Execution Center</button>
+      <div class="nav-label">Growth</div>
+      <button class="nav-item" data-view="lab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3h6M10 3v5.5L4.8 17.5A2.4 2.4 0 0 0 7 21h10a2.4 2.4 0 0 0 2.2-3.5L14 8.5V3"/><path d="M7.5 14h9"/></svg>Idea Laboratory</button>
+      <button class="nav-item" data-view="revenue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>Revenue Command</button>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="target-chip">
+        <b id="sideTarget">$200</b> target · <span id="sideDays">13</span> days left
+        <div class="bar"><i id="sideTargetBar" style="width:0%"></i></div>
+        Received: <b id="sideReceived">$0</b> · <span id="sidePct">0%</span> of target
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============ MAIN ============ -->
+  <main class="main">
+    <div class="topbar">
+      <button class="btn ghost mobile-menu-btn" id="menuBtn" aria-label="Menu">☰ Menu</button>
+      <div>
+        <h1 id="viewTitle">Command Deck</h1>
+        <div class="sub" id="viewSub">Live opportunity intelligence · data researched 18–19 Nov 2026</div>
+      </div>
+      <div class="topbar-right">
+        <span class="clock"><span class="live-dot"></span><span id="clock">—</span></span>
+        <span class="clock" id="countdownChip">Target: 2 Dec 2026 · <b id="countdownDays" style="color:var(--cyan)">13d</b> left</span>
+      </div>
+    </div>
+
+    <!-- ===== VIEW: COMMAND ===== -->
+    <section class="view active" id="view-command">
+      <div class="grid grid-4">
+        <div class="panel stat">
+          <div class="label">Revenue received</div>
+          <div class="value">$0 <small>/ $200</small></div>
+          <div class="delta">Target: <b>2 Dec 2026</b> · <span id="cmdDaysLeft">13 days</span> left</div>
+        </div>
+        <div class="panel stat violet">
+          <div class="label">Pipeline potential (est.)</div>
+          <div class="value" id="cmdPotential">$0</div>
+          <div class="delta">Estimated value of open deals — <b>not revenue</b></div>
+        </div>
+        <div class="panel stat">
+          <div class="label">Prospects researched</div>
+          <div class="value">22</div>
+          <div class="delta"><b>7 pitched</b> 19 Nov · reply check 21–22 Nov</div>
+        </div>
+        <div class="panel stat violet">
+          <div class="label">Active deals</div>
+          <div class="value" id="cmdDeals">5</div>
+          <div class="delta"><b>3 contacted</b> · 2 in research</div>
+        </div>
+      </div>
+
+      <div class="grid grid-32 mt">
+        <div class="panel">
+          <h2>Opportunity Radar — live sweep</h2>
+          <p class="hint">16 researched opportunities + 1 demo card. Blips pulse as the sweep passes them.</p>
+          <div class="radar-box"><canvas id="radarMini" width="640" height="640"></canvas>
+            <div class="radar-legend">SWEEP <b>ACTIVE</b> · <span id="radarMiniCount">16</span> SIGNALS TRACKED</div>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Top signals right now</h2>
+          <p class="hint">Highest-probability researched opportunities.</p>
+          <div id="topSignals" style="display:grid;gap:10px"></div>
+          <button class="btn mt" data-goto="radar">Open full radar →</button>
+        </div>
+      </div>
+
+      <div class="grid grid-2 mt">
+        <div class="panel">
+          <h2>Revenue snapshot</h2>
+          <p class="hint">Honest numbers only. $0 has actually been received — the work is in the pipeline.</p>
+          <div class="big-num">$0 <small>/ $200 target</small></div>
+          <div class="progress-track"><i id="cmdProgress" style="width:0%"></i></div>
+          <div style="display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted)"><span>0% of target</span><span>Deadline: 2 Dec 2026</span></div>
+          <div class="mt" style="display:grid;gap:8px;font-size:13.5px">
+            <div>Pending payments: <b>$0</b></div>
+            <div>Fastest first dollar: <b>PollPe — UPI from ₹50, under 24h</b></div>
+            <div>Highest-value lane: <b>Website rebuilds — $200–$500 per client</b></div>
+          </div>
+          <button class="btn violet mt" data-goto="revenue">Revenue Command Center →</button>
+        </div>
+        <div class="panel">
+          <h2>Needs attention</h2>
+          <p class="hint">Next actions with deadlines, from the execution queue.</p>
+          <div id="cmdTasks" style="display:grid;gap:4px"></div>
+          <button class="btn mt" data-goto="execution">Open Execution Center →</button>
+        </div>
+      </div>
+
+      <div class="panel mt">
+        <h2>Data honesty</h2>
+        <p class="hint" style="margin-bottom:0">Every opportunity and prospect in HUNTORA comes from real research conducted 18–19 Nov 2026 (files: website-clients, ad-spenders, new-opportunities-scan, real-estate-leadgen). Records are badged <span class="badge researched">Researched</span>. Anything invented for demonstration is badged <span class="badge demo">Demo</span>. No client, reply, earning or live result is fabricated anywhere in this app. Revenue received is $0 until a real payment lands.</p>
+      </div>
+    </section>
+
+    <!-- ===== VIEW: RADAR ===== -->
+    <section class="view" id="view-radar">
+      <div class="section-head"><h2>Opportunity Radar</h2><p>Scanning 16 researched opportunities across 12 categories · sweep is live</p></div>
+      <div class="radar-wrap">
+        <div class="radar-box"><canvas id="radarMain" width="640" height="640"></canvas>
+          <div class="radar-legend">SWEEP <b>ACTIVE</b> · CLICK A BLIP TO INSPECT</div>
+        </div>
+        <div>
+          <div class="search-row">
+            <input type="search" id="oppSearch" placeholder="Search opportunities, skills, sources…" aria-label="Search opportunities">
+            <select id="oppSort" aria-label="Sort opportunities">
+              <option value="prob">Sort: probability ↓</option>
+              <option value="pay">Sort: earning potential ↓</option>
+              <option value="fast">Sort: fastest to first payment</option>
+            </select>
+          </div>
+          <div class="chips" id="catChips"></div>
+          <div class="opp-grid" id="oppGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VIEW: HUNTER ===== -->
+    <section class="view" id="view-hunter">
+      <div class="section-head"><h2>AI Business Hunter</h2><p>Ask for a niche, a business type, or a problem — get a research brief, a personalised pitch and an execution plan</p></div>
+      <div class="panel hunter-box">
+        <div class="hunter-input-row">
+          <input id="hunterInput" type="text" placeholder="e.g. dentists in New Jersey · roofers running old ads · AI receptionist for clinics…" aria-label="Hunter query">
+          <button class="btn" id="hunterRun">▶ Hunt</button>
+        </div>
+        <div class="quick-prompts" id="quickPrompts"></div>
+        <div class="disclaimer">Template-generated brief — produced locally from the researched prospect data in this app. This is <b>not</b> a live AI model and does not search the internet. Connect a real search/AI API later via the integration points in the README.</div>
+        <div class="hunter-out" id="hunterOut"></div>
+      </div>
+    </section>
+
+    <!-- ===== VIEW: CLIENTS ===== -->
+    <section class="view" id="view-clients">
+      <div class="section-head"><h2>Client Discovery</h2><p>22 real businesses, researched 18–19 Nov 2026 · 7 pitched on 19 Nov · status changes save on this device</p></div>
+      <div class="search-row">
+        <input type="search" id="clientSearch" placeholder="Search company, city, trade, problem…" aria-label="Search prospects">
+        <select id="regionFilter" aria-label="Filter by region">
+          <option value="">All regions</option><option>USA</option><option>UK</option><option>Canada</option><option>Australia</option>
+        </select>
+        <select id="stageFilter" aria-label="Filter by stage">
+          <option value="">All stages</option><option>Discovered</option><option>Researched</option><option>Contacted</option><option>Negotiating</option><option>Won</option><option>Paid</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Company</th><th>Problem identified</th><th>Contact (public)</th><th>Est. value</th><th>Stage</th><th>Follow-up</th></tr></thead>
+          <tbody id="clientRows"></tbody>
+        </table>
+      </div>
+      <div class="detail-drawer panel" id="clientDetail"></div>
+    </section>
+
+    <!-- ===== VIEW: MAP ===== -->
+    <section class="view" id="view-map">
+      <div class="section-head"><h2>Global Opportunity Map</h2><p>Where the researched prospects live — click a region to filter the pipeline</p></div>
+      <div class="grid grid-32">
+        <div class="panel map-wrap">
+          <svg class="map-svg" viewBox="0 0 100 62" id="worldMap" role="img" aria-label="Stylised world map with opportunity markers"></svg>
+          <p class="hint" style="margin-top:10px;margin-bottom:0">Stylised map — markers are placed by region, not exact coordinates. Counts = researched prospects per region.</p>
+        </div>
+        <div class="panel">
+          <h2>Regions</h2>
+          <p class="hint">Prospects per region, with what is known there.</p>
+          <div class="region-list" id="regionList"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VIEW: EXECUTION ===== -->
+    <section class="view" id="view-execution">
+      <div class="section-head"><h2>Execution Center</h2><p>Discovery → payment. Drag cards between stages or use the advance button. Everything saves on this device.</p></div>
+      <div class="kanban" id="kanban"></div>
+      <div class="grid grid-2 mt">
+        <div class="panel">
+          <h2>Tasks &amp; deadlines</h2>
+          <p class="hint">Tick a task done — it saves automatically.</p>
+          <div id="taskList"></div>
+          <div class="task-add">
+            <input id="taskText" type="text" placeholder="Add a task…" aria-label="New task">
+            <input id="taskDue" type="date" aria-label="Due date" style="max-width:150px">
+            <button class="btn" id="taskAddBtn">Add</button>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Deal pipeline — value by stage</h2>
+          <p class="hint">Estimated deal values only — not revenue until a deal reaches Paid.</p>
+          <div class="chart-box"><canvas id="stageChart"></canvas></div>
+          <div class="legend" id="stageLegend"></div>
+          <div class="mt" style="font-size:13.5px;display:grid;gap:6px">
+            <div>Total pipeline (est.): <b id="pipeTotal">$0</b></div>
+            <div>Won / Paid so far: <b>$0</b> — no deal has closed yet.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VIEW: LAB ===== -->
+    <section class="view" id="view-lab">
+      <div class="section-head"><h2>Business Idea Laboratory</h2><p>Score an idea on demand, competition, cost and profit — with a transparent verdict. No recycled generic ideas.</p></div>
+      <div class="grid grid-2">
+        <div class="panel">
+          <h2>Evaluate an idea</h2>
+          <p class="hint">Score = 40% demand + 25% low competition + 15% low startup cost + 20% profit. Verdict: GO ≥ 70, TEST 50–69, PARK &lt; 50.</p>
+          <div class="lab-form">
+            <div class="full"><label for="labName">Idea name</label><input id="labName" type="text" placeholder="e.g. AI receptionist setup for dentists"></div>
+            <div><label for="labDemand">Demand (1–10) <span class="range-val" id="labDemandVal">7</span></label><input id="labDemand" type="range" min="1" max="10" value="7"></div>
+            <div><label for="labComp">Competition (1 = none, 10 = saturated) <span class="range-val" id="labCompVal">4</span></label><input id="labComp" type="range" min="1" max="10" value="4"></div>
+            <div><label for="labCost">Startup cost (USD)</label><input id="labCost" type="number" min="0" value="0"></div>
+            <div><label for="labProfit">Monthly profit potential (USD)</label><input id="labProfit" type="number" min="0" value="300"></div>
+            <div class="full"><label for="labNote">One-line summary</label><input id="labNote" type="text" placeholder="What it is, who pays, why now"></div>
+          </div>
+          <button class="btn mt" id="labEvalBtn">Evaluate idea →</button>
+          <button class="btn ghost mt" id="labSaveBtn">Save to lab</button>
+          <div class="verdict" id="labVerdict"></div>
+        </div>
+        <div>
+          <div class="panel">
+            <h2>Pre-evaluated ideas</h2>
+            <p class="hint">From the 19 Nov 2026 trends research — full evaluations, not headlines.</p>
+            <div id="labIdeas" style="display:grid;gap:12px"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VIEW: REVENUE ===== -->
+    <section class="view" id="view-revenue">
+      <div class="section-head"><h2>Revenue Command Center</h2><p>Target $200 actually received by 2 Dec 2026 · every number below is real</p></div>
+      <div class="rev-hero">
+        <div class="panel">
+          <div class="label" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Revenue received</div>
+          <div class="big-num mt" style="margin-top:8px">$0 <small>/ $200</small></div>
+          <div class="progress-track"><i id="revProgress" style="width:0%"></i></div>
+          <div style="display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted)"><span>0% of target</span><span id="revDays">13 days left</span></div>
+          <div class="grid grid-3 mt" style="gap:12px">
+            <div><div class="label" style="font-size:11px;color:var(--muted)">PENDING PAYMENTS</div><div style="font-family:var(--font-display);font-size:22px;font-weight:700">$0</div></div>
+            <div><div class="label" style="font-size:11px;color:var(--muted)">ACTIVE DEALS</div><div style="font-family:var(--font-display);font-size:22px;font-weight:700" id="revDeals">5</div></div>
+            <div><div class="label" style="font-size:11px;color:var(--muted)">PIPELINE (EST.)</div><div style="font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--cyan)" id="revPotential">$0</div></div>
+          </div>
+          <p class="hint" style="margin-top:14px;margin-bottom:0">Daily progress: <b id="revDaily">$0/day needed</b> — $200 ÷ days left. At $0 received, the required daily rate rises every day the first dollar is delayed.</p>
+        </div>
+        <div class="panel">
+          <h2>Revenue by strategy</h2>
+          <p class="hint">Received revenue is $0 across all strategies. The chart shows <b>estimated pipeline value</b> by strategy — potential, not earnings.</p>
+          <div class="chart-box"><canvas id="revChart"></canvas></div>
+          <div class="legend" id="revLegend"></div>
+        </div>
+      </div>
+      <div class="panel mt">
+        <h2>Best-performing income sources</h2>
+        <p class="hint">Ranked by money actually received. Nothing has paid yet — the table is honest about that.</p>
+        <div id="revSources"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <b style="color:var(--text)">HUNTORA</b> — Hunt Opportunities. Build Wealth. · Data researched 18–19 Nov 2026 · Revenue received: $0 · Target: $200 by 2 Dec 2026<br>
+      All prospects, opportunities and figures are drawn from real research files. Demo entries are badged DEMO. Nothing in this app fabricates clients, replies, earnings or live data. Local changes (pipeline, tasks, prospect stages) are stored only in your browser via localStorage.
+    </footer>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
